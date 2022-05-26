@@ -36,7 +36,7 @@ def runthrough(priorchar, currentchar, nextchar):
         # Serves the same purpose as above, but for current character, as well as prior character, after it gets used one last time.       
         if priorchar == (length - 1):
             currentchar = 0
-            currentThree = randomstring[priorchar] + randomstring[0] + randomstring[nextchar]
+            currentThree = randomstring[priorchar] + randomstring[currentchar] + randomstring[nextchar]
             returns(currentThree, currentchar, randomstring)
             priorchar = -1
         # Everyone else will land here 
@@ -65,7 +65,7 @@ def returns(currentThree, currentchar, randomstring):
             replacement = '1'
         case '000':
             replacement = '0'
-            
+
     randomstring[currentchar] = replacement
     randomstring = ''.join(randomstring)
     check(randomstring)
