@@ -4,13 +4,15 @@ import sys
 
 from time import sleep
 
+print(sys.version)
+sleep(20)
+
 def setup():
     global allones
     global allzeros
     global randomstring
     global length
-    #length = int(sys.argv[1])
-    length = int(input("How many numbers deep do you want to go? "))
+    length = int(sys.argv[1])
     randomstring = ''.join([random.choice(string.digits[:2]) for item in range(length)])
     allzeros = ''.join([random.choice(string.digits[0]) for item in range(length)])
     allones = ''.join([random.choice(string.digits[1]) for item in range(length)])
