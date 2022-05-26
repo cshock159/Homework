@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from asyncore import ExitNow
 import string
 import random
 import time
@@ -77,15 +78,14 @@ def check(randomstring):
     print("checking " + randomstring)
     if randomstring == allones or randomstring == allzeros:
         print(randomstring + " Matches the all ones or zeros!")
-        sleep(200)
+        exit()
     else:
         print("not quite done yet. Another round with " + randomstring)
         randomstring = list(randomstring)
         return randomstring
 
-done = 0
-while done == 0:
-    runThrough()
+
+runThrough()
 
 
             
