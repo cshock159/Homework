@@ -4,9 +4,6 @@ import sys
 
 from time import sleep
 
-print(sys.version)
-sleep(20)
-
 def setup():
     global allones
     global allzeros
